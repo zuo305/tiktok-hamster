@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+    <script>
+        // Example: Extracting the authorization code from the URL
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const authorizationCode = urlParams.get('code');
+            
+            if (authorizationCode) {
+                // Handle the authorization code (e.g., send it to your backend for further processing)
+                console.log('Authorization code:', authorizationCode);
+
+                // Optionally, redirect the user to the home page or show a success message
+                window.location.href = 'https://zuo305.github.io/tiktok-hamster/';
+            } else {
+                console.error('No authorization code found.');
+            }
+        }
+    </script>
+</head>
+<body>
+    <p>Redirecting... Please wait.</p>
+</body>
+</html>
